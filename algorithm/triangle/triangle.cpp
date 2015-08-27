@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class Solution {
@@ -13,6 +14,8 @@ public:
                 for(int i = 1; i < n; i++){
                     flag = i%2;
                     if(flag == 1) {
+                        cout<<triangle[i][0]<<" "<<triangle[i][1]<<endl;
+                        cout<<triangle[i].size()<<endl;
                         v1 = update(v0, triangle[i]);
                     }
                     else {
@@ -27,16 +30,16 @@ public:
     
     vector<int> update(vector<int> v0, vector<int> tr) {
         vector<int> v1(0);
-        for(int j = 0; j < tr.size(); j++) {
+        for(int j = 0; j < tr.size(); j++) { 
             if(j == 0){
-                v1[0] = v0[0] + tr[0];
+                v1.push_back(v0[0] + tr[0]);
             }
             else if( j == tr.size() - 1) {
-                v1[j] = v0[j-1] + tr[j];
+                v1.push_back(v0[j-1] + tr[j]);
             }
             else {
                 int premin = ( v0[j-1] > v0[j] )? v0[j] : v0[j-1];
-                v1[j] = premin + tr[j];
+                v1.push_back(premin + tr[j]);
             }
         }
         return v1;
