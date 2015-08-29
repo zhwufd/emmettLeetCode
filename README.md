@@ -1,5 +1,5 @@
 # LeetCode Problem Solution
-[LeetCode Website](http://wwww.leetcode.com)
+[LeetCode Website](http://www.leetcode.com)
 
 >Author: Emmett Wu
 
