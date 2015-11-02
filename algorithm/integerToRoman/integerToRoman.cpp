@@ -30,7 +30,7 @@ string intToRoman(int num){
 
 int main(){
     for(int i = 1; i <= 1000; i++){
-        cout << i << " " << intToRoman(i) << endl;
+        cout << intToRoman(i) << endl;
     }
     return 0;
 }
